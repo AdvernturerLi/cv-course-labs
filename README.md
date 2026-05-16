@@ -73,6 +73,12 @@ python match/runmatch.py
 使用 OpenCV 的 `SIFT_create()` 提取关键点与描述子。\
 每个关键点生成 **128维特征描述子**，并进行 **L2归一化**。
 
+**输入图像：**
+
+| pic1 | pic2 |
+|------|------|
+| ![pic1](match/input/pic1.png) | ![pic2](match/input/pic2.png) |
+
 ## 2. NNR匹配（最近邻比值检验）
 
 匹配时寻找最近邻和次近邻，计算：
@@ -93,13 +99,35 @@ python match/runmatch.py
 
 ## 4. 匹配结果可视化
 
-最终匹配结果保存到：
+最终匹配结果保存到 `match/output/matches.png`：
 
-    match/output/matches.png
+![matches](match/output/matches.png)
 
 ------------------------------------------------------------------------
 
+# Simple SIFT 效果展示
 
+## 输入图像
+
+![input](simple_sift/input/image.png)
+
+## 关键点检测结果
+
+![keypoints](simple_sift/output/keypoints.png)
+
+## 高斯金字塔（部分）
+
+| octave0_scale0 | octave0_scale2 | octave0_scale4 |
+|---|---|---|
+| ![](simple_sift/output/gaussian/octave0_scale0.png) | ![](simple_sift/output/gaussian/octave0_scale2.png) | ![](simple_sift/output/gaussian/octave0_scale4.png) |
+
+## DoG 金字塔（部分）
+
+| octave0_dog0 | octave0_dog1 | octave0_dog2 |
+|---|---|---|
+| ![](simple_sift/output/dog/octave0_dog0.png) | ![](simple_sift/output/dog/octave0_dog1.png) | ![](simple_sift/output/dog/octave0_dog2.png) |
+
+------------------------------------------------------------------------
 
 # NNR阈值实验
 
